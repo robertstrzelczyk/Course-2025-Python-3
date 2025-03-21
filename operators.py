@@ -58,3 +58,76 @@ warnings = 1
 
 if (not(errorsFound < 10 and warnings == 0)):
     print("Sprawdź kod jeszcze raz")
+
+
+# Operatory przynaleznosci
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+
+if (7 in numbers):
+    print("7 znajduje się w kolekcji numbers")
+
+animals = ("pies", "wąż", "żółw")
+
+if ("kot" not in animals):
+    print("kot nie znajduje się w krotce animals")
+
+user = {
+    "name" : "Adam",
+    "age" : "20"
+}
+
+if ("name" in user):
+    print("klucz 'name' znajduje się w słowniku user")
+
+
+# Operatory tożsamości
+
+text = "Hello"
+
+print (dir(text))
+print(text.upper())
+
+x = 256
+y = 256
+
+print (x is y)
+
+listOne = [1,2,3,4,5]
+
+listTwo = listOne
+
+print(listOne is listTwo)
+
+
+listOne.append(6)
+
+if(listOne is listTwo):
+    print("Zmiana kolekcji")
+
+listThree = [1,2,3,4,5,6]
+
+if(listThree is listOne):
+    print("Ta sama kolekcja to nie jest")
+
+
+# Operator konkatenacji ( łaczenie znaków poprzez +)
+
+firstName = "Jan"
+lastName = "Kowalski"
+fullName = firstName + " " + lastName
+print(fullName)
+
+listOne = [1,2,3]
+listTwo = [4,5,6]
+
+combinedList = listOne + listTwo
+print(combinedList)
+
+if (len(combinedList) > 5):
+    print("Lista jest za długa")
+
+greeting = "Hello"
+print(greeting)
+greeting = greeting + " " + fullName
+print(greeting)
